@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Script from "next/script";
 
-const EmbedsPagepage = () => {
-  const scriptCall = () => {
-    new makeforms.Embed({
+const EmbedsPage = () => {
+  const initializeEmbed = () => {
+    new window.makeforms.Embed({
       sourceId: "66a392b7920430ba1e7fae3a",
       root: "epcabzpyc",
     }).build();
@@ -12,10 +12,9 @@ const EmbedsPagepage = () => {
 
   return (
     <>
-      {/* <script src="https://assets.frms.link/bundles/scripts/live/in/embed.js"></script> */}
       <Script
         src="https://assets.frms.link/bundles/scripts/live/in/embed.js"
-        onLoad={() => scriptCall()}
+        onLoad={() => initializeEmbed()}
       ></Script>
       <div
         id="epcabzpyc"
@@ -26,4 +25,4 @@ const EmbedsPagepage = () => {
   );
 };
 
-export default EmbedsPagepage;
+export default EmbedsPage;

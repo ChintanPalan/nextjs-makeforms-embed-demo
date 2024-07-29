@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 import Script from "next/script";
 
 const EmbedsApppage = () => {
-  const scriptCall = () => {
-    new makeforms.Embed({
+  const initializeEmbed = () => {
+    new window.makeforms.Embed({
       sourceId: "66a392b7920430ba1e7fae3a",
       root: "epcabzpyc",
     }).build();
@@ -15,7 +15,7 @@ const EmbedsApppage = () => {
       {/* <script src="https://assets.frms.link/bundles/scripts/live/in/embed.js"></script> */}
       <Script
         src="https://assets.frms.link/bundles/scripts/live/in/embed.js"
-        onLoad={() => scriptCall()}
+        onLoad={() => initializeEmbed()}
       ></Script>
       <div
         id="epcabzpyc"
